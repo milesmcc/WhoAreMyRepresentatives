@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="font-secondary text-white text-2xl"> For address {{input.line1}}, {{input.city}}, {{input.state}} {{input.zip}}: </h1>
+
+{% if federal %}
+{% with level_name="Federal", reps=federal %}
+{% include "includes/rep_level.html" with context %}
+{% endwith %}
+{% endif %}
+
+{% if state %}
+{% with level_name="State", reps=state %}
+{% include "includes/rep_level.html" with context %}
+{% endwith %}
+{% endif %}
+
+{% if local %}
+{% with level_name="Local", reps=local %}
+{% include "includes/rep_level.html" with context %}
+{% endwith %}
+{% endif %}
+
+{% endblock %}

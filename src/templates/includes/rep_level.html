@@ -1,0 +1,9 @@
+<h3 class="text-white">{{level_name}}</h3>
+<div class="card ~neutral !low p-0">
+{% for rep in reps %}
+{% include "includes/rep.html" %}
+{% if not loop.last %}
+<hr>
+{% endif %}
+{% endfor %}
+</div>

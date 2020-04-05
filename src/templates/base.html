@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %}{% endblock %} | WhoAreMyRepresentatives</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://a17t.rmrm.io/assets/a17t.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      --family-secondary: "Arvo", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .font-secondary {
+      font-family: var(--family-secondary);
+      font-family: "Arvo", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-blue-800">
+  <main class="mx-auto px-6 py-12 md:p-0 max-w-xl">
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+
+</html>
